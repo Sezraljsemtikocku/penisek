@@ -1,7 +1,7 @@
 from game import Game
 
-g = Game()
+game = Game()
 
-while g.running:
-    g.curr_menu.display_menu()
-    g.game_loop()
+while game.running:
+    game.curr_menu.display_menu()
+    game.game_loop()

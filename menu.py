@@ -51,7 +51,7 @@ class MainMenu(Menu):
                 self.cursor_rect.midtop = (self.optionsx + self.offset, self.optionsy)
                 self.state = 'Options'
             elif self.state == 'Options':
-                self.cursor_rect.midtop = (self.optionsx + self.offset, self.optionsy)
+                self.cursor_rect.midtop = (self.startx + self.offset, self.starty)
                 self.state = 'Start'
 
     def check_input(self):
