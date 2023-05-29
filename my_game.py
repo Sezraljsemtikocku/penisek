@@ -42,6 +42,11 @@ for key, value in enumerate(empty_space):
     x, y = value
     block_below = [x, y + 16]
 
+    #this makes the mouse not spawn in blocks because it's not 16x16
+    #it's not a perfect solution but it just works ✨
+    if (x, y) == (208, 96) or (x, y) == (176, 112) or (x, y) == (256, 80):
+        continue
+
     if block_below not in empty_space:
         floor_blocks.append(empty_space[key])
 
