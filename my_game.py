@@ -13,6 +13,7 @@ clock = pygame.time.Clock()
 background = pygame.image.load('background.png').convert_alpha()
 font = pygame.font.Font('8-BIT WONDER.TTF', 12)
 mouse = pygame.image.load("Mouse.png")
+backgroundV2 = pygame.image.load("v2.png")
 mouse_size = 16
 mouse_count = -1 # -1 because the spawn also increments this counter
 cat_w = 56
@@ -93,6 +94,7 @@ while running:
 
     ################################# UPDATE WINDOW AND DISPLAY #################################
     canvas.fill((255,255,255))
+    canvas.blit(backgroundV2, (0, 0))
     canvas.blit(background, (0,0))
     cat.draw(canvas)
     window.blit(canvas, (0,0))
