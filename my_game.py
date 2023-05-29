@@ -85,9 +85,11 @@ while running:
     
     
     if mouse_count < 0 or check_mouse(mousex, mousey, catx, caty):
-        mousex, mousey = floor_blocks[random.randrange(0, len(floor_blocks))][0], floor_blocks[random.randrange(0, len(floor_blocks))][1]
+        block = random.randrange(0, len(floor_blocks))
+        mousex, mousey = floor_blocks[block][0], floor_blocks[block][1]
         while check_mouse(mousex, mousey, catx, caty):
-            mousex, mousey = floor_blocks[random.randrange(0, len(floor_blocks))][0], floor_blocks[random.randrange(0, len(floor_blocks))][1]
+            block = random.randrange(0, len(floor_blocks))
+            mousex, mousey = floor_blocks[block][0], floor_blocks[block][1]
         print("spawned a mouse at", mousex, mousey)
         mouse_count += 1
         print("Mouse count:", mouse_count)
